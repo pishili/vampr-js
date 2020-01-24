@@ -29,6 +29,5 @@ describe("Vampire", function() {
       expect(offspring1.creator).to.equal(rootVampire);
       expect(offspring2.creator).to.equal(rootVampire);
     });
-
   });
 });
