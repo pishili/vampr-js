@@ -42,6 +42,16 @@ class Vampire {
     return this.yearConverted < vampire.yearConverted;
   }
 
+  // Returns the total number of vampires that exist
+  get totalDescendents() {
+    // the total number of children each element has.
+    let count = 0;
+    for (let element of this.offspring) {
+      count += this.totalDescendents(element);
+    }
+    return count;
+  }
+
   /** Stretch **/
 
   // Returns the closest common ancestor of two vampires.
@@ -52,8 +62,7 @@ class Vampire {
   // * when comparing Ansel and Andrew, Ansel is the closest common anscestor.
   closestCommonAncestor(vampire) {
 
-    
-
+  
   }
 }
 
